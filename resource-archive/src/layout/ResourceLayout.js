@@ -1,5 +1,7 @@
-import React from 'react';
-import "../css/sass/main.scss"
+import React, { useState } from 'react';
+import "../css/main.css"
+import { Outlet } from 'react-router-dom';
+
 
 const ResourceLayout = ()=>{
 
@@ -10,15 +12,26 @@ const ResourceLayout = ()=>{
           <main>
             <nav>
               <ul>
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JAVASCRIPT</a></li>
-                <li><a href="#">REACT</a></li>
-                <li><a href="#">SANITY AND HEADLESS CMS</a></li>
+                <li key="html">
+                  <a href="html" >HTML</a>
+                </li>
+                <li key="css">
+                  <a href="css">CSS</a>
+                </li>
+                <li key="javascript">
+                  <a href="javascript">JAVASCRIPT</a>
+                </li>
+                <li key="react">
+                  <a href="react">REACT</a>
+                </li>
+                <li key="sanity">
+                  <a href="sanity">SANITY AND HEADLESS CMS</a>
+                </li>
               </ul>
             </nav>
 
             <div id="content-area">
+              <Outlet />
              
             </div>
           </main>
