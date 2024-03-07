@@ -1,17 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-import {Router, Routes} from 'react-router-dom'
+import {Router, Routes, Route} from 'react-router-dom'
 import ResourceLayout from './layout/ResourceLayout';
+import { BrowserRouter } from 'react-router-dom';
 
 
 
 function App() {
   return (
-    <Router>
+
+    <BrowserRouter>
         <Routes>
-            <Route path='/' element={<ResourceLayout />} />
+          <Route path="/" element={<ResourceLayout />} />
         </Routes>
-    </Router>
+    </BrowserRouter>
+    
+    
   );
 }
 
